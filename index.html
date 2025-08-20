@@ -148,6 +148,18 @@
                             <i class="uil uil-facebook"></i>
                         </a> -->
              </a>
+
+
+<a
+ rel="noopener"
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=tabithatoyebi@gmail.com"
+  target="_blank"
+  class="home__social-icon"
+  title="Contact Tabitha on Gmail"
+>
+  <i class="uil uil-envelope contact__icon"></i>
+</a>
+
 <a
   href="https://wa.me/2347046213966?text=Hello%20Tabitha%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20with%20you."
   target="_blank"
@@ -157,6 +169,26 @@
 >
   <i class="uil uil-whatsapp"></i>
 </a>
+
+<a
+  href="tel:+2347046213966"
+  onclick="copyNumber()"
+  class="home__social-icon"
+  title="Call Tabitha"
+>
+  <i class="uil uil-phone contact__icon"></i>
+</a>
+<script>
+  function copyNumber() {
+    const number = "2347046213966";
+    navigator.clipboard.writeText(number).then(() => {
+      alert("Phone number copied: " + number);
+    });
+  }
+</script>
+
+
+
 
             </div>
 
@@ -1028,14 +1060,47 @@
 
         <div class="contact__container container grid">
           <div>
-            <div class="contact__information">
-              <i class="uil uil-phone contact__icon"></i>
+            <div class="contact__information" onclick="copyAndDial()">
+  <i class="uil uil-phone contact__icon"></i>
 
-              <div>
-                <h3 class="contact__title">Prefer Calling?</h3>
-                <span class="contact__subtitle">+2347046213966</span>
-              </div>
-            </div>
+  <div>
+    <h3 class="contact__title">Prefer Calling?</h3>
+    <span class="contact__subtitle">+2347046213966</span>
+  </div>
+</div>
+
+<script>
+  function copyAndDial() {
+    const number = "+2347046213966";
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(number).then(() => {
+      alert("Phone number copied: " + number);
+    });
+
+    // Open dialer
+    window.location.href = "tel:" + number;
+  }
+</script>
+
+
+<div class="contact__information">
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=tabithatoyebi@gmail.com"
+    target="_blank"
+    rel="noopener"
+    class="contact__link"
+    title="Send an Email to Tabitha"
+    style="display: flex; align-items: center; text-decoration: none; color: inherit;"
+  >
+    <i class="uil uil-envelope contact__icon"></i>
+
+    <div>
+      <h3 class="contact__title">Email</h3>
+      <span class="contact__subtitle">tabithatoyebi@gmail.com</span>
+    </div>
+  </a>
+</div>
 
             <!-- <div class="contact__information">
               <i class="uil uil-envelope contact__icon"></i>
@@ -1043,7 +1108,7 @@
               <div>
                 <h3 class="contact__title">Email</h3>
                 <span class="contact__subtitle"
-                  >crazybeatofficial02@gmail.com</span
+                  >tabithatoyebi@gmail.com</span
                 >
               </div>
             </div> -->
@@ -1166,7 +1231,8 @@
   rel="noopener"
   href="https://mail.google.com/mail/?view=cm&fs=1&to=raphaelseyindejoseph@gmail.com"
   target="_blank"
-> Raphael Seyinde.</a> All
+>
+ Raphael Seyinde.</a> All
           right reserved.
         </p>
       </div>
